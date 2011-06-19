@@ -1,0 +1,42 @@
+body {
+	font-family: 'Cantarell', serif;
+	font-size: 11pt;
+}
+h3 {
+	margin: 1.3em 0 0.7em 0;
+}
+ul li {
+	list-style-type: none;
+	margin-bottom: 5px;
+	clear: left;
+}
+@media print {
+ul {
+	padding-left: 20px;
+}
+}
+
+ul li span {
+	display: block;
+}
+ul li span.when {
+	float: left;
+	width: 9em;
+
+	line-height: 1.8em;
+
+	color: gray;
+}
+ul li span.title {
+	font-size: large;
+	font-weight: bold;
+	line-height: 18pt;
+}
+ul li span.details {
+	display: inline-block;
+}
+
+@page {
+  margin: 0.25in 0.375in;
+}
+
