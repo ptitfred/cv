@@ -1,6 +1,17 @@
 body {
 	font-family: 'Cantarell', serif;
 	font-size: 11pt;
+	margin: 20pt;
+}
+h1, h2 {
+	margin: 0.15em 0;
+}
+h2 small, h1 small {
+	display: none;
+}
+h1:hover small, h2:hover small {
+	display: inline;
+	color: #CCC;
 }
 h3 {
 	margin: 1.3em 0 0.7em 0;
@@ -11,7 +22,11 @@ ul li {
 	clear: left;
 }
 @media print {
+body {
+	font-size: 9pt;
+}
 ul {
+	margin: 10pt;
 	padding-left: 20px;
 }
 }
