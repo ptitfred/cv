@@ -19,7 +19,7 @@ ul {
 ul li span {
 	display: block;
 }
-ul li span.when {
+ul li span.when, ul li span.where, ul li span.what {
 	float: left;
 	width: 9em;
 
