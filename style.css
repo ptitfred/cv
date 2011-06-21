@@ -7,11 +7,12 @@ h1, h2 {
 	margin: 0.15em 0;
 }
 h2 small, h1 small {
-	display: none;
+	color: #CCC;
+	opacity: 0;
+	-webkit-transition: 0.50s opacity;
 }
 h1:hover small, h2:hover small {
-	display: inline;
-	color: #CCC;
+	opacity: 1;
 }
 h3 {
 	margin: 1.3em 0 0.7em 0;
@@ -49,7 +50,15 @@ ul li span.when, ul li span.where, ul li span.what {
 
 	line-height: 1.8em;
 
-	color: gray;
+	opacity: 0.50;
+	-webkit-transition: 0.40s opacity;
+}
+.twitter {
+	color: #acc6d4;
+	/* color: #c0deed;*/
+}
+ul li:hover span.when, ul li:hover span.where, ul li:hover span.what {
+	opacity: 1;	
 }
 ul li span.title {
 	font-size: large;
@@ -58,6 +67,12 @@ ul li span.title {
 }
 ul li span.details {
 	display: inline-block;
+	opacity: 0.5;
+	-webkit-transition-property: opacity;
+	-webkit-transition-duration: 0.2s, 0.9s;
+}
+ul li:hover span.details {
+	opacity: 1;
 }
 
 @page {
