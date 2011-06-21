@@ -6,12 +6,31 @@
 	<title>Frédéric Menou - software engineer</title>
 	<link href="http://fonts.googleapis.com/css?family=Cantarell:regular,italic,bold,bolditalic&v1" rel="stylesheet" type="text/css" >
 	<link href="style.css" rel="stylesheet" type="text/css" />
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+	<script src="jquery.history-09cdb9b.js"></script>
+	<script>
+		function handleHash(hash) {
+			var lang = "en";
+			if (hash.length == 2) {
+				lang = hash;
+			}
+			$("*[lang]").hide();
+			$("a[class~=lang-toggler]").removeClass("selected");
+			$("*[lang=" + lang + "]").show();
+			$("a[href=#" + lang +"][class~=lang-toggler]").addClass("selected");
+		}
+
+		$(function() {
+			$.history.init(handleHash);
+		});
+	</script>
 </head>
 <body>
-<h1>Frédéric Menou <small>since 1984</small></h1>
-<h2>Ingénieur des Mines d'Alès <small>since 2006</small></h2>
-<h2 xml:lang="fr">Développement Java + Web - UI/UX - Agile</h2>
+<div class="options"><a href="#fr" class="lang-toggler">FR</a> | <a href="#en" class="lang-toggler">EN</a></div>
+<h1>Frédéric Menou <small lang="fr">depuis 1984</small><small lang="en">since 1984</small></h1>
+<h2>Ingénieur des Mines d'Alès <small lang="fr">depuis 2006</small><small lang="en">since 2006</small></h2>
+<h2 lang="fr">Développement Java + Web - UI/UX - Agile</h2>
+<h2 lang="en">Java + Web developer - UI/UX - Agile</h2>
 <h3>Contact</h3>
 <ul class="contact">
 	<li foaf:external="twitter"><span class="where">twitter</span><a href="http://twitter.com/@ptit_fred">@ptit_fred</a></li>

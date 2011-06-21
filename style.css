@@ -21,6 +21,12 @@ ul li {
 	margin-bottom: 5px;
 	clear: left;
 }
+div.options {
+	float: right;
+}
+div.options a.selected {
+	font-weight: bold;
+}
 @media print {
 body {
 	font-size: 9pt;
@@ -28,6 +34,9 @@ body {
 ul {
 	margin: 10pt;
 	padding-left: 20px;
+}
+div.options {
+	display: none;
 }
 }
 
